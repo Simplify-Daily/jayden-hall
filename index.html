@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jayden Hall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+:root{
+  --bg:#0b1220;
+  --panel:#111a2e;
+  --text:#f8fafc;
+  --muted:#b6c2d9;
+  --accent:#c9a227;
+  --border:rgba(255,255,255,0.08);
+}
+
+body{
+  font-family:Inter;
+  background:linear-gradient(180deg,#0b1220,#0f172a);
+  color:var(--text);
+}
+
+.container{width:90%;max-width:1100px;margin:auto;}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(11,18,32,0.8);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{font-weight:700;}
+.logo span{color:var(--accent);}
+
+.nav-links a{
+  margin-left:25px;
+  color:var(--muted);
+  text-decoration:none;
+}
+.nav-links a:hover{color:var(--text);}
+
+/* HERO */
+.hero{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:4rem;
+}
+
+.hero span{color:var(--accent);}
+
+.hero p{
+  margin-top:20px;
+  color:var(--muted);
+}
+
+/* BUTTONS */
+.btns{
+  margin-top:30px;
+}
+
+.btn{
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  margin:5px;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:#000;
+}
+
+.btn-secondary{
+  border:1px solid var(--border);
+  color:var(--muted);
+}
+
+/* SECTIONS */
+section{padding:70px 0;}
+
+.card{
+  background:var(--panel);
+  padding:25px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.muted{color:var(--muted);}
+
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-inner">
+  <div class="logo">Jayden <span>Hall</span></div>
+
+  <div class="nav-links">
+    <a href="articles.html">Articles</a>
+    <a href="projects.html">Projects</a>
+    <a href="reading.html">Reading</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+
+<h1>Thinking about <span>law</span>, ethics & society.</h1>
+
+<p>A structured academic site exploring reasoning, law, coding, and ideas.</p>
+
+<div class="btns">
+  <a class="btn btn-primary" href="articles.html">Explore Articles</a>
+  <a class="btn btn-secondary" href="projects.html">Discover Projects</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container card">
+<h2>Latest Writing</h2>
+<br>
+<h3>[ Article Title Placeholder ]</h3>
+<p class="muted">[ Short summary of your latest legal/ethical article ]</p>
+</div>
+</section>
+
+<footer>© 2026 Jayden Hall</footer>
+
+</body>
+</html>
