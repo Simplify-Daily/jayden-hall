@@ -1,62 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Jayden Hall</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-
-:root{
-  --bg:#0b1220;
-  --panel:#111a2e;
-  --text:#f8fafc;
-  --muted:#b6c2d9;
-  --accent:#c9a227;
-  --border:rgba(255,255,255,0.08);
-}
-
-body{
-  font-family:Inter;
-  background:linear-gradient(180deg,#0b1220,#0f172a);
-  color:var(--text);
-}
-
-.container{width:90%;max-width:1100px;margin:auto;}
-
-/* NAV */
-nav{
-  position:sticky;
-  top:0;
-  background:rgba(11,18,32,0.8);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-}
-
-.nav-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-}
-
-.logo{font-weight:700;}
-.logo span{color:var(--accent);}
-
-.nav-links a{
-  margin-left:25px;
-  color:var(--muted);
-  text-decoration:none;
-}
-.nav-links a:hover{color:var(--text);}
-
-/* HERO */
 .hero{
-  min-height:80vh;
+  min-height:90vh;
   display:flex;
   align-items:center;
   text-align:center;
@@ -67,59 +18,41 @@ nav{
 }
 
 .hero span{color:var(--accent);}
-
-.hero p{
-  margin-top:20px;
-  color:var(--muted);
-}
-
-/* BUTTONS */
-.btns{
-  margin-top:30px;
-}
-
-.btn{
-  padding:10px 18px;
-  border-radius:8px;
-  text-decoration:none;
-  margin:5px;
-  display:inline-block;
-}
-
-.btn-primary{
-  background:var(--accent);
-  color:#000;
-}
-
-.btn-secondary{
-  border:1px solid var(--border);
-  color:var(--muted);
-}
-
-/* SECTIONS */
-section{padding:70px 0;}
-
-.card{
-  background:var(--panel);
-  padding:25px;
-  border-radius:12px;
-  border:1px solid var(--border);
-}
-
 .muted{color:var(--muted);}
 
-footer{
-  text-align:center;
-  padding:40px;
-  border-top:1px solid var(--border);
-  color:var(--muted);
+/* LOADER */
+#loader{
+  position:fixed;
+  inset:0;
+  background:var(--bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
 }
 
+.spinner{
+  width:40px;height:40px;
+  border:3px solid #333;
+  border-top:3px solid var(--accent);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{to{transform:rotate(360deg);}}
 </style>
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <p class="muted">Loading...</p>
+</div>
+
+<!-- NAV -->
 <nav>
 <div class="container nav-inner">
   <div class="logo">Jayden <span>Hall</span></div>
@@ -133,31 +66,54 @@ footer{
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
 
-<h1>Thinking about <span>law</span>, ethics & society.</h1>
+<h1>Thinking about <span>law</span>, justice & society.</h1>
 
-<p>A structured academic site exploring reasoning, law, coding, and ideas.</p>
+<p class="muted">
+A structured academic portfolio exploring legal reasoning, ethics, AI regulation, and independent research.
+</p>
 
-<div class="btns">
-  <a class="btn btn-primary" href="articles.html">Explore Articles</a>
-  <a class="btn btn-secondary" href="projects.html">Discover Projects</a>
+<br>
+
+<a class="btn btn-primary" href="articles.html">Explore Articles</a>
+<a class="btn btn-secondary" href="projects.html">Discover Projects</a>
+
 </div>
+</section>
 
+<!-- CONTENT -->
+<section>
+<div class="container card">
+<h2>Latest Writing</h2>
+<br>
+<p class="muted">[ Your latest legal analysis goes here ]</p>
 </div>
 </section>
 
 <section>
 <div class="container card">
-<h2>Latest Writing</h2>
-<br>
-<h3>[ Article Title Placeholder ]</h3>
-<p class="muted">[ Short summary of your latest legal/ethical article ]</p>
+<h2>Academic Focus</h2>
+<p class="muted">Law • Ethics • Human Rights • AI Regulation • Politics • Justice Systems</p>
 </div>
 </section>
 
-<footer>© 2026 Jayden Hall</footer>
+<footer style="text-align:center;padding:40px;color:var(--muted)">
+© 2026 Jayden Hall
+</footer>
+
+<script>
+setTimeout(()=>document.getElementById("loader").style.display="none",1200);
+
+const sections=document.querySelectorAll("section");
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")})
+},{threshold:0.15});
+sections.forEach(s=>obs.observe(s));
+</script>
 
 </body>
 </html>
+
