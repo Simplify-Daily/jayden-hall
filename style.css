@@ -28,7 +28,7 @@ body{
   overflow-x:hidden;
 }
 
-/* BACKGROUND GLOW */
+/* BACKGROUND */
 
 .bg-blur{
   position:fixed;
@@ -78,25 +78,35 @@ nav{
   justify-content:space-between;
   align-items:center;
 
-  padding:20px 0;
+  padding:24px 0;
 }
 
 .logo{
-  font-size:1.2rem;
+  font-size:1.5rem;
   font-weight:700;
   letter-spacing:-0.5px;
+  text-decoration:none;
+  color:var(--text);
 }
 
 .logo span{
   color:var(--accent);
 }
 
+.logo:hover{
+  opacity:0.9;
+}
+
 .nav-links a{
-  margin-left:24px;
+  margin-left:30px;
 
   color:var(--muted);
 
   text-decoration:none;
+
+  font-size:1.05rem;
+
+  font-weight:500;
 
   transition:0.25s ease;
 
@@ -113,7 +123,7 @@ nav{
   position:absolute;
 
   left:0;
-  bottom:-6px;
+  bottom:-8px;
 
   width:0%;
   height:2px;
@@ -124,6 +134,16 @@ nav{
 }
 
 .nav-links a:hover::after{
+  width:100%;
+}
+
+/* ACTIVE PAGE */
+
+.nav-links a.active{
+  color:white;
+}
+
+.nav-links a.active::after{
   width:100%;
 }
 
@@ -205,7 +225,7 @@ nav{
   transform:translateY(-4px);
 }
 
-/* HERO FADE */
+/* ANIMATIONS */
 
 @keyframes heroFade{
   from{
@@ -267,7 +287,7 @@ section.show{
   font-size:1.06rem;
 }
 
-/* FEATURE SECTION */
+/* FEATURE */
 
 .feature{
   display:grid;
@@ -279,7 +299,7 @@ section.show{
   align-items:center;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
   background:rgba(19,29,49,0.82);
@@ -384,25 +404,25 @@ footer{
 
 @media(max-width:900px){
 
-  .hero h1{
-    font-size:4.5rem;
-  }
+.hero h1{
+  font-size:4.5rem;
+}
 
-  .page-title{
-    font-size:4rem;
-  }
+.page-title{
+  font-size:4rem;
+}
 
-  .section-title{
-    font-size:3rem;
-  }
+.section-title{
+  font-size:3rem;
+}
 
-  .feature{
-    grid-template-columns:1fr;
-  }
+.feature{
+  grid-template-columns:1fr;
+}
 
-  .nav-links a{
-    margin-left:14px;
-    font-size:0.9rem;
-  }
+.nav-links a{
+  margin-left:16px;
+  font-size:0.95rem;
+}
 
 }
