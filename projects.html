@@ -7,9 +7,7 @@
 
 <body>
 
-<div id="loader">
-<div class="loader-line"></div>
-</div>
+<div class="bg-blur blur2"></div>
 
 <nav>
 <div class="container nav-inner">
@@ -27,47 +25,49 @@
 </nav>
 
 <section>
+
 <div class="container">
+
+<h1 class="page-title">
+Projects & Development
+</h1>
+
+<p class="muted" style="max-width:760px;margin-bottom:50px;">
+Coding work, innovation competitions,
+academic development,
+and independent initiatives.
+</p>
 
 <div class="grid">
 
 <div class="card">
-<h2>SimplifyDaily</h2>
-<br>
+<h3>SimplifyDaily</h3>
 <p class="muted">
-Independent coding and productivity project.
+Productivity and organisation web project.
 </p>
 </div>
 
 <div class="card">
-<h2>Innovation Competition</h2>
-<br>
+<h3>Innovation Competition</h3>
 <p class="muted">
-Finalist invention and presentation work.
+Finalist invention concept and presentation work.
 </p>
 </div>
 
 <div class="card">
-<h2>Science Achievements</h2>
-<br>
+<h3>Science Awards</h3>
 <p class="muted">
-School science competition wins and analytical work.
+Award-winning science competition achievements.
 </p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <script>
-window.onload=()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},400);
-};
-
 const sections=document.querySelectorAll("section");
 
 const observer=new IntersectionObserver(entries=>{
