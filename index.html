@@ -2,118 +2,123 @@
 <html>
 <head>
 <title>Jayden Hall</title>
+
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
 
-<style>
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:4rem;
-}
-
-.hero span{color:var(--accent);}
-.muted{color:var(--muted);}
-
-/* LOADER */
-#loader{
-  position:fixed;
-  inset:0;
-  background:var(--bg);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-
-.spinner{
-  width:40px;height:40px;
-  border:3px solid #333;
-  border-top:3px solid var(--accent);
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{to{transform:rotate(360deg);}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- LOADER -->
 <div id="loader">
-  <div class="spinner"></div>
-  <p class="muted">Loading...</p>
+  <div class="loader-line"></div>
 </div>
 
-<!-- NAV -->
 <nav>
 <div class="container nav-inner">
-  <div class="logo">Jayden <span>Hall</span></div>
 
-  <div class="nav-links">
-    <a href="articles.html">Articles</a>
-    <a href="projects.html">Projects</a>
-    <a href="reading.html">Reading</a>
-    <a href="about.html">About</a>
-  </div>
+<div class="logo">
+Jayden <span>Hall</span>
+</div>
+
+<div class="nav-links">
+<a href="articles.html">Articles</a>
+<a href="projects.html">Projects</a>
+<a href="reading.html">Reading</a>
+<a href="about.html">About</a>
+</div>
+
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<div class="container">
+<div class="container hero-content">
 
-<h1>Thinking about <span>law</span>, justice & society.</h1>
+<h1>
+Thinking about <span>law</span>, justice & society.
+</h1>
 
-<p class="muted">
-A structured academic portfolio exploring legal reasoning, ethics, AI regulation, and independent research.
+<p>
+A developing academic portfolio exploring legal reasoning,
+ethics, politics, AI regulation, and independent research.
 </p>
 
-<br>
-
-<a class="btn btn-primary" href="articles.html">Explore Articles</a>
-<a class="btn btn-secondary" href="projects.html">Discover Projects</a>
+<div class="buttons">
+<a href="articles.html" class="btn btn-primary">Explore Articles</a>
+<a href="projects.html" class="btn btn-secondary">Discover Projects</a>
+</div>
 
 </div>
 </section>
 
-<!-- CONTENT -->
 <section>
-<div class="container card">
+<div class="container">
+
+<div class="card">
 <h2>Latest Writing</h2>
 <br>
-<p class="muted">[ Your latest legal analysis goes here ]</p>
+<h3>[ Article Title Placeholder ]</h3>
+<br>
+<p class="muted">
+[ Short summary of your latest legal or ethical argument ]
+</p>
+</div>
+
 </div>
 </section>
 
 <section>
-<div class="container card">
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
 <h2>Academic Focus</h2>
-<p class="muted">Law • Ethics • Human Rights • AI Regulation • Politics • Justice Systems</p>
+<br>
+<p class="muted">
+Law • Human Rights • Ethics • Politics • AI Regulation
+</p>
+</div>
+
+<div class="card">
+<h2>Current Projects</h2>
+<br>
+<p class="muted">
+Coding projects, competitions, research, and independent initiatives.
+</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
-<footer style="text-align:center;padding:40px;color:var(--muted)">
+<footer>
 © 2026 Jayden Hall
 </footer>
 
 <script>
-setTimeout(()=>document.getElementById("loader").style.display="none",1200);
+window.onload=()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},400);
+};
 
 const sections=document.querySelectorAll("section");
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")})
-},{threshold:0.15});
-sections.forEach(s=>obs.observe(s));
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.12});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
 </script>
 
 </body>
 </html>
-
