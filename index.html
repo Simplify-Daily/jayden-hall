@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Jayden Hall</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -13,16 +15,12 @@
 <div class="bg-blur blur1"></div>
 <div class="bg-blur blur2"></div>
 
-<div id="loader">
-<div class="loader-line"></div>
-</div>
-
 <nav>
 <div class="container nav-inner">
 
-<div class="logo">
+<a href="index.html" class="logo">
 Jayden <span>Hall</span>
-</div>
+</a>
 
 <div class="nav-links">
 <a href="articles.html">Articles</a>
@@ -66,6 +64,7 @@ View Projects
 </section>
 
 <section>
+
 <div class="container feature">
 
 <div>
@@ -100,6 +99,7 @@ Political Theory
 </div>
 
 </div>
+
 </section>
 
 <section>
@@ -112,7 +112,7 @@ Featured Writing
 
 <div class="grid">
 
-<div class="card article-card">
+<div class="card">
 
 <h3>[ Article Placeholder ]</h3>
 
@@ -122,7 +122,7 @@ Short introduction to your latest legal or ethical analysis.
 
 </div>
 
-<div class="card article-card">
+<div class="card">
 
 <h3>[ Research Placeholder ]</h3>
 
@@ -138,55 +138,11 @@ Independent research and reflections exploring law and society.
 
 </section>
 
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-Projects & Development
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>SimplifyDaily</h3>
-<p class="muted">
-Coding and productivity project documenting development skills.
-</p>
-</div>
-
-<div class="card">
-<h3>Innovation Competition</h3>
-<p class="muted">
-Finalist invention presentation exploring creative problem solving.
-</p>
-</div>
-
-<div class="card">
-<h3>Science Achievements</h3>
-<p class="muted">
-Award-winning science competition work and analytical reasoning.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 <footer>
 © 2026 Jayden Hall
 </footer>
 
 <script>
-window.onload=()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},400);
-};
-
 const sections=document.querySelectorAll("section");
 
 const observer=new IntersectionObserver(entries=>{
