@@ -7,9 +7,7 @@
 
 <body>
 
-<div id="loader">
-<div class="loader-line"></div>
-</div>
+<div class="bg-blur blur1"></div>
 
 <nav>
 <div class="container nav-inner">
@@ -27,39 +25,49 @@
 </nav>
 
 <section>
+
 <div class="container">
+
+<h1 class="page-title">
+Articles & Essays
+</h1>
+
+<p class="muted" style="max-width:760px;margin-bottom:50px;">
+Independent writing exploring law,
+ethics, politics, justice systems,
+and analytical reasoning.
+</p>
 
 <div class="grid">
 
-<div class="card">
-<h2>[ Article Placeholder ]</h2>
-<br>
+<div class="card article-card">
+<h3>[ Article Title ]</h3>
 <p class="muted">
-[ Add your law / ethics essay preview here ]
+Short summary of the article and argument.
 </p>
 </div>
 
-<div class="card">
-<h2>[ Second Article ]</h2>
-<br>
+<div class="card article-card">
+<h3>[ Second Essay ]</h3>
 <p class="muted">
-[ Add another article summary ]
+Independent analysis and reflections.
+</p>
+</div>
+
+<div class="card article-card">
+<h3>[ Research Piece ]</h3>
+<p class="muted">
+Structured exploration of legal reasoning and debate.
 </p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <script>
-window.onload=()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},400);
-};
-
 const sections=document.querySelectorAll("section");
 
 const observer=new IntersectionObserver(entries=>{
