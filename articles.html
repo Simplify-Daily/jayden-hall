@@ -7,24 +7,73 @@
 
 <body>
 
+<div id="loader">
+<div class="loader-line"></div>
+</div>
+
 <nav>
 <div class="container nav-inner">
-  <div class="logo">Articles</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="reading.html">Reading</a>
-    <a href="about.html">About</a>
-  </div>
+
+<div class="logo">Articles</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="reading.html">Reading</a>
+<a href="about.html">About</a>
+</div>
+
 </div>
 </nav>
 
 <section>
-<div class="container card">
-<h2>[ Article Title ]</h2>
-<p class="muted">[ Full law / ethics essay goes here ]</p>
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h2>[ Article Placeholder ]</h2>
+<br>
+<p class="muted">
+[ Add your law / ethics essay preview here ]
+</p>
+</div>
+
+<div class="card">
+<h2>[ Second Article ]</h2>
+<br>
+<p class="muted">
+[ Add another article summary ]
+</p>
+</div>
+
+</div>
+
 </div>
 </section>
+
+<script>
+window.onload=()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},400);
+};
+
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.12});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+</script>
 
 </body>
 </html>
