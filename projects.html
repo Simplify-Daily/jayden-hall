@@ -7,31 +7,81 @@
 
 <body>
 
+<div id="loader">
+<div class="loader-line"></div>
+</div>
+
 <nav>
 <div class="container nav-inner">
-  <div class="logo">Projects</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="reading.html">Reading</a>
-    <a href="about.html">About</a>
-  </div>
+
+<div class="logo">Projects</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="articles.html">Articles</a>
+<a href="reading.html">Reading</a>
+<a href="about.html">About</a>
+</div>
+
 </div>
 </nav>
 
 <section>
-<div class="container card">
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
 <h2>SimplifyDaily</h2>
-<p class="muted">Coding + productivity project</p>
+<br>
+<p class="muted">
+Independent coding and productivity project.
+</p>
+</div>
+
+<div class="card">
+<h2>Innovation Competition</h2>
+<br>
+<p class="muted">
+Finalist invention and presentation work.
+</p>
+</div>
+
+<div class="card">
+<h2>Science Achievements</h2>
+<br>
+<p class="muted">
+School science competition wins and analytical work.
+</p>
+</div>
+
+</div>
+
 </div>
 </section>
 
-<section>
-<div class="container card">
-<h2>Innovation Work</h2>
-<p class="muted">Competition ideas + invention development</p>
-</div>
-</section>
+<script>
+window.onload=()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},400);
+};
+
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.12});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+</script>
 
 </body>
 </html>
