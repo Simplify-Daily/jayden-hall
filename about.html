@@ -7,10 +7,6 @@
 
 <body>
 
-<div id="loader">
-<div class="loader-line"></div>
-</div>
-
 <nav>
 <div class="container nav-inner">
 
@@ -27,34 +23,34 @@
 </nav>
 
 <section>
+
 <div class="container">
+
+<h1 class="page-title">
+About Me
+</h1>
 
 <div class="card">
 
-<h2>About Me</h2>
-
-<br>
-
 <p class="muted">
-I am a UK student interested in law, ethics,
-justice systems, analytical reasoning, and independent research.
-This site documents my academic development,
-projects, and writing.
+I am a UK student interested in law,
+ethics, analytical reasoning,
+justice systems,
+and independent academic development.
+
+This site documents my projects,
+research,
+reading,
+and writing as I continue exploring legal and political ideas.
 </p>
 
 </div>
 
 </div>
+
 </section>
 
 <script>
-window.onload=()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},400);
-};
-
 const sections=document.querySelectorAll("section");
 
 const observer=new IntersectionObserver(entries=>{
