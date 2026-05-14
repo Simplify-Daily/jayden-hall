@@ -7,10 +7,6 @@
 
 <body>
 
-<div id="loader">
-<div class="loader-line"></div>
-</div>
-
 <nav>
 <div class="container nav-inner">
 
@@ -27,39 +23,42 @@
 </nav>
 
 <section>
+
 <div class="container">
+
+<h1 class="page-title">
+Reading & Research
+</h1>
+
+<p class="muted" style="max-width:760px;margin-bottom:50px;">
+Books, legal cases,
+research topics,
+and independent reflections.
+</p>
 
 <div class="grid">
 
 <div class="card">
-<h2>[ Book / Case Placeholder ]</h2>
-<br>
+<h3>[ Book Placeholder ]</h3>
 <p class="muted">
-[ Add reflections and legal analysis ]
+Reflections and analysis.
 </p>
 </div>
 
 <div class="card">
-<h2>[ Research Topic ]</h2>
-<br>
+<h3>[ Legal Case ]</h3>
 <p class="muted">
-[ Add notes and arguments ]
+Reasoning and argument breakdown.
 </p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <script>
-window.onload=()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},400);
-};
-
 const sections=document.querySelectorAll("section");
 
 const observer=new IntersectionObserver(entries=>{
