@@ -3,7 +3,7 @@
   --bg2:#0f172a;
   --panel:#131d31;
   --text:#f8fafc;
-  --muted:#b8c2d9;
+  --muted:#c7d2e5;
   --accent:#c9a227;
   --border:rgba(255,255,255,0.06);
 }
@@ -54,7 +54,7 @@ body{
 
 .container{
   width:90%;
-  max-width:1280px;
+  max-width:1320px;
   margin:auto;
 }
 
@@ -68,7 +68,7 @@ nav{
 
   backdrop-filter:blur(14px);
 
-  background:rgba(10,17,32,0.72);
+  background:rgba(10,17,32,0.75);
 
   border-bottom:1px solid var(--border);
 }
@@ -78,11 +78,11 @@ nav{
   justify-content:space-between;
   align-items:center;
 
-  padding:30px 0;
+  padding:34px 0;
 }
 
 .logo{
-  font-size:1.9rem;
+  font-size:2.3rem;
   font-weight:700;
   letter-spacing:-1px;
   text-decoration:none;
@@ -98,17 +98,15 @@ nav{
 }
 
 .nav-links a{
-  margin-left:36px;
+  margin-left:38px;
 
   color:var(--muted);
 
   text-decoration:none;
 
-  font-size:1.18rem;
+  font-size:1.35rem;
 
   font-weight:500;
-
-  letter-spacing:-0.2px;
 
   transition:0.25s ease;
 
@@ -125,7 +123,7 @@ nav{
   position:absolute;
 
   left:0;
-  bottom:-8px;
+  bottom:-10px;
 
   width:0%;
   height:2px;
@@ -138,8 +136,6 @@ nav{
 .nav-links a:hover::after{
   width:100%;
 }
-
-/* ACTIVE PAGE */
 
 .nav-links a.active{
   color:white;
@@ -162,19 +158,21 @@ nav{
 }
 
 .hero-content{
-  max-width:1050px;
+  max-width:1150px;
 
   animation:heroFade 1s ease;
 }
 
 .hero h1{
-  font-size:7.5rem;
+  font-size:9rem;
 
-  line-height:0.9;
+  line-height:0.88;
 
-  letter-spacing:-6px;
+  letter-spacing:-7px;
 
-  margin-bottom:30px;
+  margin-bottom:34px;
+
+  font-weight:700;
 }
 
 .hero span{
@@ -182,29 +180,29 @@ nav{
 }
 
 .hero p{
-  max-width:820px;
+  max-width:920px;
 
   margin:auto;
 
   color:var(--muted);
 
-  line-height:2;
+  line-height:2.1;
 
-  font-size:1.25rem;
+  font-size:1.45rem;
 
-  letter-spacing:-0.2px;
+  letter-spacing:-0.3px;
 }
 
 /* BUTTONS */
 
 .buttons{
-  margin-top:46px;
+  margin-top:50px;
 }
 
 .btn{
   display:inline-block;
 
-  padding:16px 26px;
+  padding:18px 30px;
 
   border-radius:14px;
 
@@ -214,7 +212,7 @@ nav{
 
   margin:8px;
 
-  font-size:1.05rem;
+  font-size:1.15rem;
 
   font-weight:500;
 }
@@ -233,7 +231,7 @@ nav{
   transform:translateY(-4px);
 }
 
-/* HERO ANIMATION */
+/* ANIMATION */
 
 @keyframes heroFade{
   from{
@@ -250,7 +248,7 @@ nav{
 /* SECTIONS */
 
 section{
-  padding:150px 0;
+  padding:170px 0;
 
   opacity:0;
   transform:translateY(30px);
@@ -265,24 +263,28 @@ section.show{
 
 /* TITLES */
 
-.section-title{
-  font-size:4.8rem;
+.page-title{
+  font-size:8.5rem;
 
-  line-height:1;
+  line-height:0.9;
 
-  letter-spacing:-4px;
+  letter-spacing:-6px;
 
-  margin-bottom:30px;
+  margin-bottom:40px;
+
+  font-weight:700;
 }
 
-.page-title{
-  font-size:7rem;
+.section-title{
+  font-size:5.5rem;
 
-  line-height:0.92;
+  line-height:0.95;
 
   letter-spacing:-5px;
 
-  margin-bottom:34px;
+  margin-bottom:36px;
+
+  font-weight:700;
 }
 
 /* TEXT */
@@ -290,11 +292,11 @@ section.show{
 .muted{
   color:var(--muted);
 
-  line-height:2;
+  line-height:2.1;
 
-  font-size:1.18rem;
+  font-size:1.38rem;
 
-  letter-spacing:-0.2px;
+  letter-spacing:-0.25px;
 }
 
 /* FEATURE */
@@ -304,7 +306,7 @@ section.show{
 
   grid-template-columns:1.1fr 0.9fr;
 
-  gap:60px;
+  gap:70px;
 
   align-items:center;
 }
@@ -312,13 +314,13 @@ section.show{
 /* CARDS */
 
 .card{
-  background:rgba(19,29,49,0.82);
+  background:rgba(19,29,49,0.84);
 
   border:1px solid var(--border);
 
-  border-radius:20px;
+  border-radius:22px;
 
-  padding:42px;
+  padding:46px;
 
   backdrop-filter:blur(10px);
 
@@ -332,11 +334,13 @@ section.show{
 }
 
 .card h3{
-  font-size:2rem;
+  font-size:2.5rem;
 
-  margin-bottom:18px;
+  margin-bottom:22px;
 
-  letter-spacing:-1px;
+  letter-spacing:-2px;
+
+  line-height:1;
 }
 
 /* GRID */
@@ -344,9 +348,9 @@ section.show{
 .grid{
   display:grid;
 
-  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
 
-  gap:30px;
+  gap:34px;
 }
 
 /* LOADER */
@@ -417,20 +421,20 @@ footer{
 @media(max-width:900px){
 
 .hero h1{
-  font-size:4.8rem;
+  font-size:5.6rem;
 }
 
 .page-title{
-  font-size:5rem;
+  font-size:5.8rem;
 }
 
 .section-title{
-  font-size:4rem;
+  font-size:4.5rem;
 }
 
 .hero p,
 .muted{
-  font-size:1.05rem;
+  font-size:1.15rem;
 }
 
 .feature{
@@ -438,20 +442,24 @@ footer{
 }
 
 .nav-inner{
-  padding:22px 0;
+  padding:24px 0;
 }
 
 .logo{
-  font-size:1.4rem;
+  font-size:1.6rem;
 }
 
 .nav-links a{
   margin-left:14px;
-  font-size:0.95rem;
+  font-size:1rem;
 }
 
 .card{
-  padding:30px;
+  padding:34px;
+}
+
+.card h3{
+  font-size:2rem;
 }
 
 }
