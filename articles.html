@@ -1,80 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Articles</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<nav>
-<div class="container nav-inner">
-
-<a href="index.html" class="logo">
-Jayden <span>Hall</span>
-</a>
-
-<div class="nav-links">
-<a href="articles.html" class="active">Articles</a>
-<a href="projects.html">Projects</a>
-<a href="reading.html">Reading</a>
-<a href="about.html">About</a>
-</div>
-
-</div>
-</nav>
-
-<section>
-
-<div class="container">
-
-<h1 class="page-title">
-Articles & Essays
-</h1>
-
-<p class="muted" style="max-width:760px;margin-bottom:50px;">
-Independent writing exploring law,
-ethics, politics, justice systems,
-and analytical reasoning.
-</p>
-
 <div class="grid">
 
-<div class="card">
-<h3>[ Article Title ]</h3>
+<a href="article1.html" class="card">
+
+<h3>
+The Role of Law in Modern Society
+</h3>
+
 <p class="muted">
-Short summary of the article and argument.
+Exploring whether legal systems create justice or simply maintain order.
 </p>
-</div>
 
-<div class="card">
-<h3>[ Second Essay ]</h3>
+</a>
+
+<a href="article2.html" class="card">
+
+<h3>
+AI & Human Rights
+</h3>
+
 <p class="muted">
-Independent analysis and reflections.
+Research and reflections on artificial intelligence regulation.
 </p>
-</div>
+
+</a>
 
 </div>
-
-</div>
-
-</section>
-
-<script>
-const sections=document.querySelectorAll("section");
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:0.12});
-
-sections.forEach(section=>{
-observer.observe(section);
-});
-</script>
-
-</body>
-</html>
